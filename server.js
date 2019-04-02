@@ -5,14 +5,13 @@ const express = require("express");
 
 const app = express();
 const routes = require('./routes');
+app.use('/api', routes);
 
-app.use('/', routes);
-
-var distDir = __dirname + "/dist/";
+let distDir = __dirname + "/dist";
 app.use(express.static(distDir));
 
-var server = app.listen(process.env.PORT || 8080, function () {
-    var port = server.address().port;
+let server = app.listen(process.env.PORT || 8080, function () {
+    let port = server.address().port;
     console.log('|| SERVER STARTED');
     console.log('|| Running on port:', port);
 });

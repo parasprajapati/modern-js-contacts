@@ -1,4 +1,4 @@
-// /contacts/
+// /api/contacts/
 const routes = require('express').Router();
 const db = require('../db');
 
