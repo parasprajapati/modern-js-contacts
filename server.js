@@ -11,7 +11,7 @@ let distDir = __dirname + "/dist";
 app.use(express.static(distDir));
 
 let server = app.listen(process.env.PORT || 8080, function () {
-    let port = server.address().port;
-    console.log('|| SERVER STARTED');
-    console.log('|| Running on port:', port);
+  let port = server.address().port;
+  console.log('|| SERVER STARTED');
+  console.log('|| Running on port:', port);
 });
